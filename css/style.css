@@ -1,0 +1,121 @@
+/* google font import */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+/* base style */
+body {
+	font-size: 20px;
+	font-family: Montserrat;
+	background-color: #7e7e7e;
+}
+
+input,
+button {
+	font-size: 20px;
+}
+
+/* main container for the to-do list */
+.container {
+	width: 530px;
+	height: 90vh;
+	margin: 0 auto;
+	margin-top: 2rem;
+	position: relative;
+	border: 6px solid #9dbdd2;
+	border-radius: 30px;
+	background: rgb(199,233,255);
+	background: linear-gradient(137deg, rgba(199,233,255,1) 0%, rgba(255,255,255,1) 100%);
+}
+
+/* main heading */
+h1 {
+	text-align: center;
+	padding-top: .75rem;
+}
+
+/* container style, input box and add button button style */
+.input-container {
+	position: absolute;
+	bottom: 1rem;
+	padding: 1rem;
+}
+
+.priority-container {
+	margin-top: 1rem;
+}
+
+#item-input {
+	width: 380px;
+}
+
+#add-btn {
+	width: 108px;
+}
+
+/* to-do items */
+.todo-items {
+	list-style: none;
+	padding-left: 1.5rem;
+}
+
+.todo-items li {
+	margin-bottom: 1rem;
+}
+
+/* fade to green effect for checked to-do item */
+.todo-items li.completed {
+	transition: all 1s ease;
+	color: #008000;
+	opacity: 0.9;
+	text-decoration: line-through;
+}
+
+/* fade to red effect for deleted to-do item */
+.todo-items li.deleted {
+	transition: all 1s ease;
+	color: #800000;
+	opacity: 0.3;
+}
+
+/* delete button style */
+.delete-btn {
+	width: 108px;
+	float: right;
+	margin-right: 1.5rem;
+}
+
+/* priority styles */
+.todo-items li.urgent:after {
+	content: 'Urgent';
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: bold;
+    vertical-align: middle;
+    padding: 4px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: red;
+}
+
+.todo-items li.important:after {
+	content: 'Important';
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: bold;
+    vertical-align: middle;
+    padding: 4px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: blue;
+}
+
+.todo-items li.not-urgent:after {
+	content: 'Not Urgent';
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: bold;
+    vertical-align: middle;
+    padding: 4px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: green;
+}
